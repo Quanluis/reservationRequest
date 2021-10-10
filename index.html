@@ -1,96 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Reservation request</title>
-	<link rel="stylesheet" href="reservation.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./jqueryui/jquery-ui.theme.css">
 </head>
-	<!-- Tab links -->
+<body>
 
-	<h1>Reservation Request</h1>
+    <h1>Reservation Request</h1>
 
-<div class="tab">
-	<button class="tabLinks"><legend>General Information</legend></button>
-	<button class="tabLinks">Preferences</button>
-	<button class="tabLinks">Contact</button>
-</div>
- <!--Tab info-->
+    <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">General Information</a></li>
+          <li><a href="#tabs-2">Preferences</a></li>
+          <li><a href="#tabs-3">Contact Information</a></li>
+        </ul>
+        <div id="tabs-1">
+         
+            <fieldset>
+				<legend>General Information</legend>
+				<div>
+					<label for="arrival_date">Arrival date:</label>
+					<input type="text" name="arrival_date" id="arrival_date" autofocus>
+					<span>*</span>
+				</div>
+				<div>
+					<label for="nights">Nights:</label>
+					<input type="text" name="nights" id="nights">
+					<span>*</span>
+				</div>
+				<div>
+					<label>Adults:</label>
+					<select name="adults" id="adults">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>        		        		        		
+					</select>
+				</div>
+				<div>
+					<label>Children:</label>
+					<select name="children" id="children">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>        		        		        		
+					</select>
+				</div>     	
+			</fieldset>
 
-<div class="tabcontent">
-	<fieldset>
-		<legend>General Information</legend>
-		<div>
-			<label for="arrival_date">Arrival date:</label>
-			<input type="text" name="arrival_date" id="arrival_date" autofocus>
-			<span>*</span>
-		</div>
-		<div>
-			<label for="nights">Nights:</label>
-			<input type="text" name="nights" id="nights">
-			<span>*</span>
-		</div>
-		<div>
-			<label>Adults:</label>
-			<select name="adults" id="adults">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>        		        		        		
-			</select>
-		</div>
-		<div>
-			<label>Children:</label>
-			<select name="children" id="children">
-				<option value="0">0</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>        		        		        		
-			</select>
-		</div>     	
-	</fieldset>
-</div>
+        </div>
+        <div id="tabs-2">
+          
+            <fieldset>
+				<legend>Preferences</legend>
+				<div>
+					<label>Room type:</label>
+					<input type="radio" name="room" id="standard" class="left" checked>Standard	        	
+					<input type="radio" name="room" id="business" class="left">Business
+					<input type="radio" name="room" id="suite" class="left last">Suite
+				</div>
+				<div>
+					<label>Bed type:</label>
+					<input type="radio" name="bed" id="king" class="left" checked>King
+					<input type="radio" name="bed" id="double" class="left last">Double Double
+				</div>
+				<div>
+					<input type="checkbox" name="smoking" id="smoking">Smoking
+				</div>
+			</fieldset>	
+      </div>
 
-<div class="tabcontent">
-	<fieldset>
-		<legend>Preferences</legend>
-		<div>
-			<label>Room type:</label>
-			<input type="radio" name="room" id="standard" class="left" checked>Standard	        	
-			<input type="radio" name="room" id="business" class="left">Business
-			<input type="radio" name="room" id="suite" class="left last">Suite
-		</div>
-		<div>
-			<label>Bed type:</label>
-			<input type="radio" name="bed" id="king" class="left" checked>King
-			<input type="radio" name="bed" id="double" class="left last">Double Double
-		</div>
-		<div>
-			<input type="checkbox" name="smoking" id="smoking">Smoking
-		</div>
-	</fieldset>	
-</div>
+      <div id="tabs-3">
+		
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+                <span>*</span>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" id="phone" placeholder="999-999-9999">
+                <span>*</span>
+            </div>
+        </fieldset>
+    </div>
 
-<div class="tabcontent">
-	<fieldset>
-		<legend>Contact Information</legend>
-		<div>
-			<label for="name">Name:</label>
-			<input type="text" name="name" id="name">
-			<span>*</span>
-		</div>
-		<div>
-			<label for="email">Email:</label>
-			<input type="text" name="email" id="email">
-			<span>*</span>
-		</div>
-		<div>
-			<label for="phone">Phone:</label>
-			<input type="text" name="phone" id="phone" placeholder="999-999-9999">
-			<span>*</span>
-		</div>
-	</fieldset>
 </div>
 
 <form action="response.html" method="get"
@@ -111,8 +119,11 @@
     	</fieldset>
 	</form>
 
-<body>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="reservation.js"></script>
+        <script src="jqueryui/jquery.js"></script>
+        <script src="jqueryui/jquery-ui.js"></script>
+        <script src="reservation.js"></script>
+
+
 </body>
+
 </html>

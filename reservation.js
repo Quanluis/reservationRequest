@@ -1,6 +1,14 @@
 "use strict";
 
 $(document).ready( () => {
+	$('#drag').draggable();
+});
+
+$(document).ready( () => {
+	$('#tabs').tabs();
+})
+
+$(document).ready( () => {
 	const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 	
 	// move the focus to the first text box
