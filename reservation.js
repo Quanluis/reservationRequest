@@ -9,6 +9,18 @@ $(document).ready( () => {
 })
 
 $(document).ready( () => {
+	$('#datepicker').datepicker({ minDate: 1, maxDate: '+3M'});
+})
+
+document.getElementById('policies').onclick = () => {
+	$(document).ready( () => {
+		$('#dialog').dialog();
+	})
+
+	console.log('hello');
+}
+
+$(document).ready( () => {
 	const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 	
 	// move the focus to the first text box
